@@ -1,0 +1,37 @@
+@import "tailwindcss";
+/* @import "components"; */
+
+*::selection{
+    background-color: rgb(43, 42, 46);
+    color:rgb(212, 211, 211)
+}
+
+/* Chrome, Safari, Edge, Opera (WebKit/Blink) */
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  /* Tailwind's slate-800 = #1e293b */
+  box-shadow: 0 0 0 1000px #1e293b inset !important;
+  -webkit-text-fill-color: #ffffff !important;
+  /* caret-color: #ffffff !important; */
+  transition: background-color 5000s ease-in-out 0s; /* stops the flash-to-yellow on autofill */
+}
+
+/* Firefox (uses different pseudo-class, less commonly an issue but good to cover) */
+input:autofill {
+  box-shadow: 0 0 0 1000px #1e293b inset !important;
+  -webkit-text-fill-color: #ffffff !important;
+}
+
